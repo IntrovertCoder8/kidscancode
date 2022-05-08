@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.banner {
+    width: 100%;
+    /* height: 100vh; */
+    height: 300px;
+    background-image: url('images/banner-2.png');
+    background-position: top left;
+    background-size: cover;
+    /* background-origin: border-box; */
+    /* background-clip: border-box;
+    text-align: center; */
+    /* padding-top: 100px; */
+}
+.banner div {
+    height: 100px;
+}
+.first {
+    color: white;
+    padding: 25px 0;
+    animation: slide-left 5s linear infinite alternate;
+}
+
+.second {
+    text-align: center;
+    margin-left: 25px;
+    color: white;
+    font-size: 64px;
+    letter-spacing: 4px;
+    animation: appear 5s linear 1s infinite;
+}
+
+.third {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    animation: flyup 3s linear 1s infinite;
+    font-size: 20px;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: -25%;
+        font-size: 16px;
+    }
+    40% {
+        font-size: 48px;
+        letter-spacing: 5px;
+        color: brown;
+        /* margin-left: 40%; */
+    }
+    to {
+        margin-left: 100%;
+        font-size: 16px;
+    }
+}
+
+@keyframes appear {
+    from {
+        height: 0%;
+        overflow: hidden;
+    }
+    50% {
+        height: 50%;
+        overflow: hidden;
+
+    }
+    75% {
+        height: 75%;
+        overflow: hidden;
+        color: brown;
+    }
+    to {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+@keyframes flyup {
+    from {
+        transform: translateY(75px);
+        opacity: 0%;
+        font-size: 20px;
+    }
+    50% {
+        transform: translateY(37.5px);
+        opacity: 50%;
+        font-size: 24px;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
+        font-size: 28px;
+    }
+}
+
+nav {
+    width: 100%;
+    height: 72px;
+    background-color: aliceblue;
+    /* padding-top: 15px; */
+    /* position: relative; */
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+    padding-top: 26px;
+    font-size: 20px;
+    width: 60%;
+    clear: right;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    border-right: 3px darkblue solid;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: brown;
+}
+
+
+.logo {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    padding-top: 20px;
+    font-size: 28px;
+}
+.logo a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-left: 5px;
+    color: brown;
+    text-shadow: 1px 1px 4px orangered;
+}
+
+main {
+    width: 100%;
+    /* padding: 10px; */
+}
+
+main .our_journey {
+    /* width: 100%; */
+    height: 310px;
+    background-color: rgb(172, 174, 181);
+}
+
+main .our_journey .journey {
+    width: 90%;
+    height: 260px;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url('images/2019.jpg');
+    background-position: center;
+    background-size: cover;
+    animation: ourjourney 10s ease infinite;
+}
+main .our_journey .journey h4 {
+    text-align: right;
+    /* padding-top: 72px; */
+    font-size: 48px;
+    letter-spacing: 5px;
+}
+
+main .our_journey .journey h4::after {
+    content: "2019";
+    color: orangered;
+    animation: year 10s ease infinite;
+    border: 2px solid grey;
+    background-color: lightgrey;
+}
+
+@keyframes ourjourney {
+    0% {
+        background-image: url('images/2019.jpg');
+    }
+    25% {
+        background-image: url('images/2020.jpg');
+    }
+    50% {
+        background-image: url('images/2021.jpg');
+    }
+    75% {
+        background-image: url('images/2022.jpg');
+    }
+    100% {
+        background-image: url('images/2019.jpg');
+    }
+}
+
+@keyframes year {
+    0% {
+        content: "2019";
+    }
+    25% {
+        content: "2020";
+    }
+    50% {
+        content: "2021";
+    }
+    75% {
+        content: "2022";
+    }
+    100% {
+        content: "2019";
+    }
+}
+
+
+
+main .why_choose_us {
+    /* height: 300px; */
+    background-color: rgb(147, 140, 140);
+    text-align: center;
+}
+
+main .why_choose_us .features {
+    width: 150px;
+    height: 120px;
+    padding: 15px 0;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-color: lightgrey;
+    box-shadow: 1px 1px 2px white;
+
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 1s;
+}
+
+main .why_choose_us .features:hover {
+    background-color: white;
+}
+
+main .why_choose_us .features h3 {
+    margin-top: 15px;
+    color: brown;
+}
+
+main .our_courses {
+    /* height: 300px; */
+    background-color: rgb(234, 228, 228);
+    padding: 15px 0;
+}
+
+main .our_courses .course_card {
+    /* background-color: lightblue; */
+    /* color: green; */
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 90%;
+    height: 200px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+main .our_courses .course_card .image {
+    float: left;
+    /* clear: both; */
+    width: 40%;
+    height: 100%;
+    /* background-image: url(images/course.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.course1 {
+    background-image: url(images/course.jpg);
+}
+
+.course2 {
+    background-image: url(images/course2.jpg);
+}
+
+.course3 {
+    background-image: url(images/course3.jpg);
+}
+
+.course4 {
+    background-image: url(images/course4.jpg);
+}
+
+main .our_courses .course_card .text {
+    float: right;
+    width: 55%;
+    height: 100%;
+    padding: 10px 0;
+    margin: 25px 0;
+    /* clear: right; */
+}
+
+main .our_courses .course_card .text h3 {
+    font-size: 20px;
+}
+
+main .our_courses .course_card .text h5 {
+    font-size: 16px;
+    color: grey;
+}
+
+main .our_courses .course_card .text p {
+    font-size: 14px;
+    color: darkcyan;
+}
+
+.level {
+    color: brown;
+}
+
+main .our_teachers {
+    /* height: 325px; */
+    background-color: rgb(224, 215, 215);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.title {
+    /* margin: 10px 0; */
+    text-align: center;
+    color: white;
+}
+
+main .our_teachers .teacher_card {
+    width: 200px;
+    height: 275px;
+    border: 2px solid darkgreen;
+    border-radius: 15px;
+    background-color: azure;
+    box-shadow: 5px 5px 5px lightgray;
+    display: inline-block;
+    margin: 10px;
+    transition: all 0.5s ease-in;
+}
+
+main .our_teachers .teacher_card:hover {
+    transform: scale(1.075);
+}
+
+main .our_teachers .teacher_card img {
+    width: 96px;
+    height: 96px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin: 15px 0;
+}
+
+main .our_teachers .teacher_card h4 {
+    color: green;
+}
+
+main .our_teachers .teacher_card h5 {
+    color: grey;
+}
+
+main .price {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(215, 209, 209);
+    padding: 10px 0;
+}
+
+main .price table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid green;
+}
+
+table thead {
+    background-color: cadetblue;
+    color: white;
+    height: 64px;
+}
+table tbody {
+    font-size: 16px;
+}
+table tbody tr {
+    height: 48px;
+
+}
+
+table tbody tr.odd {
+    background-color: lightblue;
+}
+
+table tbody tr:hover {
+    background-color: lightseagreen;
+}
+
+.faq {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.faq h3 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+.faq article {
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+
+}
+
+.faq article:target {
+    height: 100px;
+    color: white;
+    background-color: rgb(144, 193, 193);
+    padding: 5px;
+}
+
+.faq p {
+    margin: 10px 0;
+}
+
+.faq p a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.number {
+    color: white;
+    background-color: orangered;
+    padding: 7.5px 10px;
+    margin-right: 5px;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+
+.contact {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(207, 205, 205);
+}
+
+
+.form-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgb(185, 182, 182);
+    text-align: center;
+    
+}
+
+label {
+    display: inline-block;
+    color: white;
+    width: 40%;
+    text-align: left;
+    font-weight: 900;
+    /* margin-right: 1px; */
+}
+input, select {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    width: 55%;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid darkgreen;
+}
+
+button {
+    width: 95%;
+    margin-top: 5px;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    /* margin: 0 auto; */
+}
+button:hover {
+    background-color: rgb(244, 155, 122);
+}
+
+footer {
+    /* height: 250px; */
+    background-color: rgb(162, 162, 162);
+    text-align: center;
+    padding: 15px;
+}
+
+.social-media {
+    padding: 10px;
+}
+
+footer p {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
